@@ -1,5 +1,5 @@
 # responsive
 Demo of responsive NexusJs Compnents
 
-#Demo
+## Demo
 https://shivamvyas25.github.io/responsive/
