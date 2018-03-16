@@ -1,0 +1,33 @@
+#target{
+    position: absolute !important;
+    width: 100% !important;
+}
+div div{
+    width : 100% !important;
+}
+/* div div span{
+    width : 4.76% !important;
+} */
+
+/* div div span:nth-child(odd){
+    left : 2% !important;
+}
+div div span:nth-child(even){
+    left : -1% !important;
+} */
+
+div div span svg{
+    width :100% !important;
+}
+
+/* div div span:nth-child(odd){
+    left : 2% !important;
+}
+div div span:nth-child(even){
+    left : -1% !important;
+} */
+
+div div span svg rect{
+    width : 100% !important;
+}
+

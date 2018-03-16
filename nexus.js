@@ -4406,7 +4406,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      value: function sizeInterface() {
 	
 	        var keyX = 0;
-	
+					var keysWide = keyX;
+					var noOfwhite = 0;
+				
 	        var keyPositions = [];
 	
 	        for (var i = 0; i < this.range.high - this.range.low; i++) {
@@ -4415,27 +4417,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	          var scaleIndex = (i + this.range.low) % this.keyPattern.length;
 	          var nextScaleIndex = (i + 1 + this.range.low) % this.keyPattern.length;
-	          if (i + 1 + this.range.low >= this.range.high) {
-	            keyX += 1;
-	          } else if (this.keyPattern[scaleIndex] === "w" && this.keyPattern[nextScaleIndex] === "w") {
-	            keyX += 1;
-	          } else {
-	            keyX += 0.5;
-	          }
+						if(this.keyPattern[scaleIndex] === "w")
+						{
+							noOfwhite++;
+	          
+						}
+
+						if (i + 1 + this.range.low >= this.range.high) {
+							keyX = 1;
+						} else if (this.keyPattern[scaleIndex] === "w" && this.keyPattern[nextScaleIndex] === "w") {
+							keyX = 1;
+						} else {
+	            keyX = 0.5;
+							
+						}
+						keysWide += keyX;
 	        }
-	        var keysWide = keyX;
-	
+	     //console.log(noOfwhite);
+			 
 	        //  let padding = this.width / 120;
 	        var padding = 1;
 	        var buttonWidth = (this.width - padding * 2) / keysWide;
 	        var buttonHeight = (this.height - padding * 2) / 2;
-	
-	        for (var i = 0; i < this.keys.length; i++) {
+					var initialLeft = 0;
+					var diffSize = (this.range.high - this.range.low);
+				  for (var i = 0; i < this.keys.length; i++) {
 	
 	          var container = this.keys[i].parent;
 	          container.style.position = "absolute";
-	          container.style.left = keyPositions[i] * buttonWidth + padding + "px";
-	          if (this.keys[i].color === "w") {
+	          //container.style.left = keyPositions[i] * buttonWidth + padding + "px";
+						 initialLeft = initialLeft + keyPositions[i]*(100/noOfwhite);
+						 container.style.left = initialLeft + "%";
+						 console.log("i :"+i+"		init"+initialLeft);
+						 
+						if (this.keys[i].color === "w") {
 	            container.style.top = padding + "px";
 	            this.keys[i].resize(buttonWidth, buttonHeight * 2);
 	          } else {
