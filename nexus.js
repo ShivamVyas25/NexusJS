@@ -4373,6 +4373,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          var container = document.createElement("span");
 	          var scaleIndex = (i + this.range.low) % this.keyPattern.length;
 	
+						container.id = ""+i;
+						container.setAttribute("aria-label","key "+i);
+						container.tabIndex = "0";
+
 	          var key = new PianoKey(container, {
 	            component: true,
 	            note: i + this.range.low,
