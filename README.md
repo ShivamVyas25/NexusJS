@@ -1,4 +1,4 @@
-# responsive
-Demo of responsive NexusJs Compnents
+# NexusJS
+Demo of  NexusJs Compnents
 
 ##### Demo Url : https://shivamvyas25.github.io/NexusJS/
