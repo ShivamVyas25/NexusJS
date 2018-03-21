@@ -7447,13 +7447,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	
-	    this.location = this.getCoordinates();
+			this.location = this.getCoordinates();
+			
 	    this.element.setAttribute("cx", this.location.x);
 	    this.element.setAttribute("cy", this.location.y);
 	  };
 	
 	  this.getCoordinates = function () {
-	    return {
+				
+			return {
+				
 	      x: this.x * this.envelope.width,
 	      y: (1 - this.y) * this.envelope.height
 	    };
@@ -7553,7 +7556,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    buildInterface: {
 	      value: function buildInterface() {
 	        var _this = this;
-	
+					
 	        this.points.forEach(function (point) {
 	          var node = new Point(point, _this);
 	          _this.nodes.push(node);
@@ -8178,7 +8181,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	
 	        this.canvas.context.fillStyle = this.colors.fill;
-	        this.canvas.context.fillRect(0, 0, this.canvas.element.width, this.canvas.element.height);
+	
+					this.canvas.context.fillRect(0, 0, this.canvas.element.width, this.canvas.element.height);
 	
 	        for (var i = 0; i < this.analysers.length; i++) {
 	
@@ -8208,6 +8212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var linear = math.normalize(this.db, -70, 5);
 	            var exp = linear * linear;
 	            var y = math.scale(exp, 0, 1, this.element.height, 0);
+							this.meterWidth = this.canvas.element.width / this.channels;
 	
 	            this.canvas.context.fillStyle = this.colors.accent;
 	            this.canvas.context.fillRect(this.meterWidth * i, y, this.meterWidth, this.canvas.element.height - y);

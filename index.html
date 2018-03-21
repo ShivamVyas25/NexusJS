@@ -6,9 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo</title>
     <script src="nexus.js"></script>
+    <script src="tone.js"></script>
+ 
 </head>
-<body>
-        <div  aria-label="piano" id="target" tabindex="0"></div>
+<body onresize="makeResponsive()">
+        <h2  class="componentTitle" >
+                Envelope
+         </h2>
+         
+         <div class="component" id="envelope" >
+             </div>
+          <hr/>
+    <h2  class="componentTitle" >
+                Multislider
+         </h2>
+         
+         <div class="component" id="multislider" >
+             </div>
+             <hr/>
+    <h2  class="componentTitle" >
+               Piano
+        </h2>
+        
+        <div class="component" id="piano" >
+            </div>
+            <hr/>
+        <h2  class="componentTitle" >
+                Select
+        </h2>
+        
+        <div class="component" id="select" >
+            </div>
+            <hr/>
+            <h2  class="componentTitle" >
+                    Sequencer
+            </h2>
+            
+            <div class="component" id="sequencer" >
+                </div>
+                <hr/>
+        <h2  class="componentTitle" >
+                Textbutton
+        </h2>
+        
+        <div class="component" id="textbutton" >
+            </div>
+            <hr/>
+            <h2  class="componentTitle" >
+                    Controls(To See Visualization)
+            </h2>
+          
+            
+    <div class="componentTitle">Power
+    <div id="power" class="component"></div></div>
+        <div class="componentTitle">Echo
+        <div id="echo" class="component"></div></div>
+        <hr/>
+        <h2  class="componentTitle" >
+                Meter
+        </h2>
+        
+        <div class="component" id="meter" >
+            </div>
+            <hr/>
+        <h2  class="componentTitle"  >
+                Oscilloscope
+        </h2>
+        <div class="component" id="oscilloscope" >
+            </div>
+            <hr/>
+            <h2  class="componentTitle"  >
+                    Spectrogram
+            </h2>
+            <div  class="component" id="spectrogram" >
+            </div>
 
 <script src="app.js"></script>
 <link rel="stylesheet" href="style.css">  
