@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <script src="nexus.js"></script>
+    <script src="tone.js"></script>
+ 
+</head>
+<body onresize="makeResponsive()">
+     
+    <div class="tab " >
+                <button class="tablinks" onclick="openTab(event, 'oscilloscope')">oscilloscope</button>
+                <button class="tablinks" onclick="openTab(event, 'spectrogram')">spectrogram</button>
+        </div>
+    <div  id="oscilloscope" class="tabcontent">
+    </div>
+
+    <div  id="spectrogram" class="tabcontent">
+    
+    </div>
+
+    <div  id="piano">
+        </div>
+    
+   
+<script src="mix.js"></script>
+<link rel="stylesheet" href="mix.css">  
+</body>
+</html>
